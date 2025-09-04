@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <h1>contador</h1>
+        <div id="numero"></div>
+        <button onclick="diminuir()">-</button>
+        <button onclick="inicio()">iniciar/zerar</button>
+        <button onclick="aumentar()">+</button>
+    </div>
+    <script>
+        let numero = 0;
+        function inicio(){
+            numero = 0
+            document.getElementById('numero').innerHTML = '0';
+        }
+        function aumentar(){
+            document.getElementById('numero').innerHTML = '';
+            numeroATT =  numero += 1;
+            let p = document.createElement('p');
+            p.textContent = numeroATT
+            document.getElementById('numero').appendChild(p)
+        }
+        function diminuir(){
+            document.getElementById('numero').innerHTML = '';
+            numeroATT =  numero -= 1;
+            let p = document.createElement('p');
+            p.textContent = numeroATT
+            document.getElementById('numero').appendChild(p)
+        }
+    </script>
+</body>
+</html>
